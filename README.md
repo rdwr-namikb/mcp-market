@@ -27,7 +27,7 @@ A web-based marketplace and catalog for discovering Model Context Protocol (MCP)
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/mcp-market.git
+git clone https://github.com/rdwr-namikb/mcp-market.git
 cd mcp-market
 
 # Import the database (MongoDB must be running)
