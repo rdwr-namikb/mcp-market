@@ -1,0 +1,11 @@
+[
+  {
+    "is_mcp": false,
+    "has_imports": false,
+    "has_decorators": false,
+    "evidence_files": [],
+    "confidence": "low",
+    "full_name": "laravel/boost",
+    "csv_tools": []
+  }
+]

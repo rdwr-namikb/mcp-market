@@ -1,0 +1,18 @@
+[Unit]
+Description=MCP Market Web Server
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/gitdirectory
+Environment="PATH=/home/ubuntu/gitdirectory/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/home/ubuntu/gitdirectory/venv/bin/python3 /home/ubuntu/gitdirectory/app.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+

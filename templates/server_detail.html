@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">MCP Server - Radware MCP Market</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#CCCCCC"/>
+                        <circle cx="150" cy="50" r="45" fill="#CCCCCC"/>
+                        <circle cx="250" cy="50" r="45" fill="#CC0000"/>
+                        <circle cx="350" cy="50" r="45" fill="#000000"/>
+                        <circle cx="250" cy="150" r="45" fill="#F0AB00"/>
+                        <circle cx="350" cy="150" r="45" fill="#CCCCCC"/>
+                        <circle cx="150" cy="250" r="45" fill="#CCCCCC"/>
+                        <circle cx="250" cy="250" r="45" fill="#008844"/>
+                    </svg>
+                    <a href="/" class="logo-text" style="text-decoration: none; color: inherit;">Radware MCP Market</a>
+                </div>
+                <nav class="nav" style="display: none;">
+                </nav>
+                <div class="header-actions">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main detail-main">
+        <div class="container detail-container">
+            <div class="detail-layout">
+                <!-- Left Content -->
+                <div class="detail-content">
+                    <!-- Breadcrumbs -->
+                    <nav class="breadcrumbs" id="breadcrumbs">
+                        <a href="/">Home</a>
+                        <span> > </span>
+                        <a href="/">Servers</a>
+                        <span> > </span>
+                        <span id="breadcrumbName">Loading...</span>
+                    </nav>
+
+                    <!-- Server Header -->
+                    <div class="server-detail-header" id="serverHeader">
+                        <div class="server-title-section">
+                            <div class="server-title-row">
+                                <div class="server-title-icon" id="serverIcon">⏳</div>
+                                <div class="server-title-info">
+                                    <h1 class="server-title" id="serverTitle">Loading...</h1>
+                                    <p class="server-author" id="serverAuthor">by <span id="serverOwner">...</span></p>
+                                    <div class="server-meta">
+                                        <div class="server-rating">
+                                            <span class="star">★</span>
+                                            <span id="serverRating">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="server-tags" id="serverTags"></div>
+                            <p class="server-short-desc" id="serverShortDesc">Loading description...</p>
+                        </div>
+                    </div>
+
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <button class="tab-button active" data-tab="about">About</button>
+                        <button class="tab-button" data-tab="readme">README</button>
+                        <button class="tab-button" data-tab="tools">Tools</button>
+                        <button class="tab-button" data-tab="faq">FAQ</button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- About Tab -->
+                        <div class="tab-pane active" id="aboutTab">
+                            <h2 class="section-heading">About</h2>
+                            <p class="about-description" id="aboutDescription">Loading...</p>
+                            <h2 class="section-heading">Key Features</h2>
+                            <ul class="features-list" id="featuresList">
+                                <li>Loading features...</li>
+                            </ul>
+                        </div>
+
+                        <!-- README Tab -->
+                        <div class="tab-pane" id="readmeTab">
+                            <div class="readme-content" id="readmeContent">
+                                <p>Loading README...</p>
+                            </div>
+                        </div>
+
+                        <!-- Tools Tab -->
+                        <div class="tab-pane" id="toolsTab">
+                            <div class="tools-content" id="toolsContent">
+                                <div class="tools-loading" id="toolsLoading" style="display: none;">
+                                    <div class="spinner"></div>
+                                    <p>Analyzing repository for MCP tools...</p>
+                                </div>
+                                <div class="tools-results" id="toolsResults">
+                                    <p style="color: #666; text-align: center; padding: 48px 0;">Loading tools...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Tab -->
+                        <div class="tab-pane" id="faqTab">
+                            <div class="faq-content">
+                                <p>No FAQ available at this time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <div class="detail-sidebar">
+                    <div class="sidebar-section">
+                        <div class="sidebar-buttons">
+                            <button class="sidebar-btn" id="shareBtn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13 10V13C13 13.5304 12.7893 14.0391 12.4142 14.4142C12.0391 14.7893 11.5304 15 11 15H3C2.46957 15 1.96086 14.7893 1.58579 14.4142C1.21071 14.0391 1 13.5304 1 13V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H6M10 1H14M14 1V5M14 1L6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Share
+                            </button>
+                            <a href="#" class="sidebar-btn" id="githubBtn" target="_blank" rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="sidebar-btn" id="npmBtn" target="_blank" rel="noopener noreferrer" style="display: none;">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M0 0v16h16V0H0zm13.333 2.667H8v10.666H2.667V2.667H0v13.333h16V2.667h-2.667z"/>
+                                </svg>
+                                NPM
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/detail.js') }}"></script>
+    <script>
+        const slug = '{{ slug }}';
+    </script>
+</body>
+</html>
+

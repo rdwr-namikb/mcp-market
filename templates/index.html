@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radware MCP Market</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#CCCCCC"/>
+                        <circle cx="150" cy="50" r="45" fill="#CCCCCC"/>
+                        <circle cx="250" cy="50" r="45" fill="#CC0000"/>
+                        <circle cx="350" cy="50" r="45" fill="#000000"/>
+                        <circle cx="250" cy="150" r="45" fill="#F0AB00"/>
+                        <circle cx="350" cy="150" r="45" fill="#CCCCCC"/>
+                        <circle cx="150" cy="250" r="45" fill="#CCCCCC"/>
+                        <circle cx="250" cy="250" r="45" fill="#008844"/>
+                    </svg>
+                    <span class="logo-text">Radware MCP Market</span>
+                </div>
+                <nav class="nav" style="display: none;">
+                </nav>
+                <div class="header-actions">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search servers...">
+                </div>
+            </div>
+
+            <!-- Featured Section Header -->
+            <section class="section-header">
+                <h2 class="section-title">Featured MCP Servers</h2>
+                <div class="section-actions">
+                    <button id="exportBtn" class="export-btn" type="button">Export</button>
+                </div>
+            </section>
+
+            <!-- Servers Grid -->
+            <div class="servers-grid" id="serversGrid">
+                <!-- Servers will be loaded here dynamically -->
+            </div>
+
+            <!-- Loading Indicator -->
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading more servers...</p>
+            </div>
+
+            <!-- End of Results -->
+            <div class="end-message" id="endMessage" style="display: none;">
+                <p>You've reached the end of the list!</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
+
